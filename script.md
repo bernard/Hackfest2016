@@ -11,18 +11,22 @@ Voici aussi des notes que j'ai pris au courant de mes experiences.
 Malware detect and analysis.
 
 - File modified in the last 7 days;
+
 `find /home/mywebsite -type f -ctime -7`
 
 - PHP file modified in the last 30 days:
+
 `find /home/mywebsite -type f -name "*.php" -ctime -30`
 
 - Finding base64 coded text, look for (php):
+
 `base64_decode
 gzinflate(base64_decode
 eval(gzinflate(base64_decode
 eval(base64_decode`
 
 - Finding backdoors code, look for (php):
+
 `phpinfo
 system
 php_uname
@@ -36,6 +40,7 @@ passthru`
 - Look for `<script>` tags
 
 - Simple usefull grep:
+
 `grep -Rn “shell_exec *(” /var/www
 grep -Rn “include *(” /var/www
 grep -Rn “require *(” /var/www
