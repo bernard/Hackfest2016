@@ -33,7 +33,7 @@ readfile
 edoced_46esab
 passthru`
 
-- Look for <script> tags
+- Look for `<script>` tags
 
 - Simple usefull grep:
 `grep -Rn “shell_exec *(” /var/www
